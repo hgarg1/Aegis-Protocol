@@ -1,0 +1,924 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aegis Protocol | Operations Console</title>
+    <link rel="stylesheet" href="aegis.css" />
+  </head>
+  <body>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="scanline" aria-hidden="true"></div>
+    <div class="particle-field" id="particle-field" aria-hidden="true"></div>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <div>
+            <p class="brand-title">Aegis Protocol</p>
+            <p class="brand-sub">Zero-Trust Deterrence</p>
+          </div>
+        </div>
+        <nav class="nav">
+          <div class="nav-group">
+            <p class="nav-label">Operations</p>
+            <a class="nav-item is-active" href="#overview">
+              <span class="nav-main">
+                <span class="nav-dot"></span>
+                Overview
+              </span>
+            </a>
+            <a class="nav-item" href="#protocol">
+              <span class="nav-main">
+                <span class="nav-dot"></span>
+                Protocol
+              </span>
+            </a>
+            <a class="nav-item" href="#community">
+              <span class="nav-main">
+                <span class="nav-dot"></span>
+                Community
+              </span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-label">Intelligence</p>
+            <a class="nav-item" href="#geo">
+              <span class="nav-main">
+                <span class="nav-dot"></span>
+                Jurisdiction Nodes
+              </span>
+              <span class="badge">17</span>
+            </a>
+            <a class="nav-item" href="#guardians">
+              <span class="nav-main">
+                <span class="nav-dot"></span>
+                Guardian Network
+              </span>
+            </a>
+            <a class="nav-item" href="#pricing">
+              <span class="nav-main">
+                <span class="nav-dot"></span>
+                Watchlist
+              </span>
+              <span class="badge">4</span>
+            </a>
+            <a class="nav-item" href="#pricing">
+              <span class="nav-main">
+                <span class="nav-dot"></span>
+                Escrow Vaults
+              </span>
+              <span class="badge">12</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-label">Governance</p>
+            <a class="nav-item" href="#trust">
+              <span class="nav-main">
+                <span class="nav-dot"></span>
+                Trust
+              </span>
+            </a>
+          </div>
+        </nav>
+        <div class="sidebar-card">
+          <p class="label">Continuity Status</p>
+          <p class="value">Armed</p>
+          <p class="meta">Next check-in: 04:21:32</p>
+          <button class="button button-outline">Request Access</button>
+        </div>
+        <div class="sidebar-quick">
+          <button class="button button-primary">Initiate Safeguard</button>
+          <button class="button button-outline">Secure Intake</button>
+        </div>
+        <div class="sidebar-card compact">
+          <p class="label">System Health</p>
+          <p class="value">92%</p>
+          <p class="meta">All nodes nominal</p>
+        </div>
+        <div class="sidebar-footer">
+          <button class="link-btn" data-modal="modal-docs">Docs</button>
+          <button class="link-btn" data-modal="modal-support">Support</button>
+          <button class="link-btn" data-modal="modal-legal">Legal</button>
+        </div>
+      </aside>
+
+      <div class="main">
+        <header class="topbar">
+          <div class="topbar-left">
+            <h1>Ops Console</h1>
+            <span class="pill">Mission Control</span>
+          </div>
+          <div class="topbar-actions">
+            <div class="status-chip">
+              <span class="status-dot"></span>
+              <span>Heartbeat: 00:05:12</span>
+            </div>
+            <div class="user-chip">
+              <span class="user-initials">AP</span>
+              <span>Operator</span>
+            </div>
+          </div>
+        </header>
+
+        <main class="content">
+          <section class="hero-card" id="overview">
+            <div class="hero-bg" aria-hidden="true">
+              <div class="square-grid" id="square-grid"></div>
+              <div class="hero-video-shade"></div>
+            </div>
+            <div>
+              <p class="eyebrow">Mission Control</p>
+              <h2>
+                In an age of escalating threats, your voice must endure. Aegis Protocol
+                releases critical information automatically should you become unreachable.
+              </h2>
+              <p class="lead">
+                Private by design. Public only when necessary. Designed for journalists,
+                diplomats, whistleblowers, and high-net-worth individuals.
+              </p>
+              <div class="hero-actions">
+                <button class="button button-primary">Initiate Safeguard</button>
+                <button class="button button-outline">Learn How It Works</button>
+              </div>
+            </div>
+            <div class="hero-metrics">
+              <div class="metric">
+                <p class="label">Continuity Rating</p>
+                <p class="value">A+</p>
+              </div>
+              <div class="metric">
+                <p class="label">Jurisdictions</p>
+                <p class="value">17</p>
+              </div>
+              <div class="metric">
+                <p class="label">Active Guardians</p>
+                <p class="value">128</p>
+              </div>
+              <div class="metric">
+                <p class="label">Median Response</p>
+                <p class="value">41 min</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="ops-strip">
+            <div class="ops-tile">
+              <p class="label">Check-in Cadence</p>
+              <p class="value">Nominal</p>
+              <p class="meta">Window: 12h</p>
+              <span class="tile-status status-good"></span>
+            </div>
+            <div class="ops-tile">
+              <p class="label">Escrow Integrity</p>
+              <p class="value">97.4%</p>
+              <p class="meta">Shards synced</p>
+              <span class="tile-status status-good"></span>
+            </div>
+            <div class="ops-tile">
+              <p class="label">Jurisdiction Health</p>
+              <p class="value">Stable</p>
+              <p class="meta">17 active nodes</p>
+              <span class="tile-status status-good"></span>
+            </div>
+            <div class="ops-tile">
+              <p class="label">Release Readiness</p>
+              <p class="value">Armed</p>
+              <p class="meta">2 triggers queued</p>
+              <span class="tile-status status-warn"></span>
+            </div>
+          </section>
+
+          <div class="section-divider" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <section class="grid two-col">
+            <div class="card">
+              <div class="card-header">
+                <h3>Operational Overview</h3>
+                <span class="pill pill-good">Nominal</span>
+              </div>
+              <div class="metrics-row">
+                <div>
+                  <p class="label">Check-in Cadence</p>
+                  <p class="value">12h window</p>
+                </div>
+                <div>
+                  <p class="label">Escrow Integrity</p>
+                  <p class="value">97.4%</p>
+                </div>
+                <div>
+                  <p class="label">Release Readiness</p>
+                  <p class="value">Armed</p>
+                </div>
+                <div>
+                  <p class="label">Failover Latency</p>
+                  <p class="value">120 ms</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h3>Deterrence Posture</h3>
+                <span class="pill pill-warn">Guarded</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 78%"></div>
+              </div>
+              <div class="progress-labels">
+                <span>Low</span>
+                <span>Guarded</span>
+                <span>Hardened</span>
+              </div>
+              <div class="meta-grid">
+                <div>
+                  <p class="label">Last Proof</p>
+                  <p class="value">00:05:12 ago</p>
+                </div>
+                <div>
+                  <p class="label">Triggers Queued</p>
+                  <p class="value">2</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="timeline">
+            <div class="card-header">
+              <h3>Protocol Timeline</h3>
+              <span class="pill">Lifecycle</span>
+            </div>
+            <div class="timeline-track">
+              <div class="timeline-node is-active">
+                <span class="node-dot"></span>
+                <h3>Plan</h3>
+                <p>Define releases, guardians, and legal contours.</p>
+              </div>
+              <div class="timeline-node">
+                <span class="node-dot"></span>
+                <h3>Encrypt</h3>
+                <p>Client-side encryption seals every payload.</p>
+              </div>
+              <div class="timeline-node">
+                <span class="node-dot"></span>
+                <h3>Monitor</h3>
+                <p>Adaptive check-ins validate safety.</p>
+              </div>
+              <div class="timeline-node">
+                <span class="node-dot"></span>
+                <h3>Release</h3>
+                <p>Triggers execute trusted dissemination.</p>
+              </div>
+            </div>
+          </section>
+
+          <div class="section-divider" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <section class="card" id="protocol">
+            <div class="card-header">
+              <h3>Protocol Stack</h3>
+              <div class="tabs" role="tablist">
+                <button class="tab is-active" data-tab="trigger">Trigger Fabric</button>
+                <button class="tab" data-tab="escrow">Encrypted Escrow</button>
+                <button class="tab" data-tab="release">Release Orchestration</button>
+                <button class="tab" data-tab="verification">Verification Mesh</button>
+                <button class="tab" data-tab="governance">Governance Layer</button>
+                <button class="tab" data-tab="telemetry">Telemetry Grid</button>
+              </div>
+            </div>
+            <div class="tab-panels">
+              <div class="tab-panel is-active" data-panel="trigger">
+                <p>
+                  Custom schedules, anomaly detection, and deadman timers with
+                  operator-defined grace periods.
+                </p>
+                <ul>
+                  <li>Adaptive signal scoring</li>
+                  <li>Guardian override channels</li>
+                  <li>Offshore failover</li>
+                </ul>
+              </div>
+              <div class="tab-panel" data-panel="escrow">
+                <p>
+                  Payloads are stored as split secrets with independent trustees and
+                  legal mandates.
+                </p>
+                <ul>
+                  <li>Threshold decryption</li>
+                  <li>Hardware-backed sealing</li>
+                  <li>Audit-safe metadata</li>
+                </ul>
+              </div>
+              <div class="tab-panel" data-panel="release">
+                <p>
+                  Multi-party authorization, timed release, and public verifiability for
+                  journalists and allies.
+                </p>
+                <ul>
+                  <li>Delayed broadcast routing</li>
+                  <li>Document integrity seals</li>
+                  <li>Public proof-of-life logs</li>
+                </ul>
+              </div>
+              <div class="tab-panel" data-panel="verification">
+                <p>
+                  Multi-channel authenticity checks spanning hardware keys, device
+                  attestation, and biometric proofs.
+                </p>
+                <ul>
+                  <li>FIDO2-backed identity checks</li>
+                  <li>Out-of-band confirmation paths</li>
+                  <li>Replay-resistant attestations</li>
+                </ul>
+              </div>
+              <div class="tab-panel" data-panel="governance">
+                <p>
+                  Oversight governance ensures lawful releases, ethical escalation, and
+                  multi-party approvals across jurisdictions.
+                </p>
+                <ul>
+                  <li>Independent review board</li>
+                  <li>Jurisdictional policy map</li>
+                  <li>Escalation playbooks</li>
+                </ul>
+              </div>
+              <div class="tab-panel" data-panel="telemetry">
+                <p>
+                  Live telemetry monitors cadence, integrity, and guardian availability
+                  across every node.
+                </p>
+                <ul>
+                  <li>Signal health scoring</li>
+                  <li>Node heartbeat audits</li>
+                  <li>Latency threshold alarms</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="geo-panel" id="geo">
+            <div>
+              <div class="card-header">
+                <h3>Jurisdiction Map</h3>
+                <span class="pill pill-good">Live</span>
+              </div>
+              <div class="geo-grid" id="geo-grid"></div>
+            </div>
+            <div class="geo-metrics">
+              <p class="label">Active nodes</p>
+              <p class="value">17</p>
+              <p class="label">Failover latency</p>
+              <p class="value">120 ms</p>
+              <p class="label">Escrow integrity</p>
+              <p class="value">97.4%</p>
+            </div>
+          </section>
+
+          <section class="grid three-col" id="community">
+            <div class="card">
+              <h3>High-net-worth Individuals</h3>
+              <p>Protect estates, guardianship, and legacy with pre-authorized releases.</p>
+            </div>
+            <div class="card">
+              <h3>Investigative Journalists</h3>
+              <p>Secure source materials, publish if silenced, and safeguard teams.</p>
+            </div>
+            <div class="card">
+              <h3>Diplomats & Whistleblowers</h3>
+              <p>Ensure policy continuity, crisis disclosures, and protected evidence.</p>
+            </div>
+          </section>
+
+          <section class="guardian-map" id="guardians">
+            <div class="card-header">
+              <h3>Guardian Network</h3>
+              <span class="pill">Continuity Council</span>
+            </div>
+            <div class="guardian-stage">
+              <div class="guardian-ring">
+                <span data-role="Legal Counsel"></span>
+                <span data-role="Escrow Trustee"></span>
+                <span data-role="Technical Auditor"></span>
+                <span data-role="Human Rights Advisor"></span>
+                <span data-role="Operational Guardian"></span>
+                <span data-role="Medical Proxy"></span>
+              </div>
+              <div class="guardian-core">
+                <p>Aegis Core</p>
+                <span>Zero-trust orchestration</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="posture-card" id="posture">
+            <div>
+              <div class="card-header">
+                <h3>Security Posture</h3>
+                <span class="pill pill-warn">Guarded</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 78%"></div>
+              </div>
+              <div class="progress-labels">
+                <span>Low</span>
+                <span>Guarded</span>
+                <span>Hardened</span>
+              </div>
+            </div>
+            <div class="meta-grid">
+              <div>
+                <p class="label">Current status</p>
+                <p class="value">Guarded</p>
+              </div>
+              <div>
+                <p class="label">Next check-in</p>
+                <p class="value">04:21:32</p>
+              </div>
+              <div>
+                <p class="label">Triggers queued</p>
+                <p class="value">2</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="grid two-col" id="pricing">
+            <div class="card">
+              <div class="card-header">
+                <h3>Protection Tiers</h3>
+                <span class="pill pill-good">Annual Billing</span>
+              </div>
+              <div class="tier">
+                <div>
+                  <p class="label">Core</p>
+                  <p class="value">$99 / month</p>
+                </div>
+                <ul>
+                  <li>Software-based authentication</li>
+                  <li>Unlimited scheduled protocols</li>
+                  <li>Encrypted client-side storage</li>
+                  <li>Basic escalation triggers</li>
+                </ul>
+              </div>
+              <div class="tier">
+                <div>
+                  <p class="label">Elite</p>
+                  <p class="value">$499 / month</p>
+                </div>
+                <ul>
+                  <li>FIDO2 hardware security keys (up to 3)</li>
+                  <li>Priority human review escalation</li>
+                  <li>Advanced multi-factor check-ins</li>
+                  <li>Concierge onboarding</li>
+                </ul>
+              </div>
+              <div class="tier">
+                <div>
+                  <p class="label">Concierge</p>
+                  <p class="value">Custom</p>
+                </div>
+                <ul>
+                  <li>Bespoke hardware specifications</li>
+                  <li>Dedicated protocol design assistance</li>
+                  <li>Enterprise-grade integrations</li>
+                  <li>Annual retainer options</li>
+                </ul>
+              </div>
+              <button class="button button-outline" data-modal="modal-concierge">
+                Contact Concierge
+              </button>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h3>Trust Ledger</h3>
+                <span class="pill">Immutable</span>
+              </div>
+              <div class="ledger">
+                <div class="ledger-row">
+                  <span>Audit 09.18</span>
+                  <span>Hash: 9f21e1...c4b2</span>
+                  <span>Signed: Sentinel Group</span>
+                </div>
+                <div class="ledger-row">
+                  <span>Audit 08.02</span>
+                  <span>Hash: 7b31a4...9a0f</span>
+                  <span>Signed: Radian Labs</span>
+                </div>
+                <div class="ledger-row">
+                  <span>Audit 06.14</span>
+                  <span>Hash: 51d98c...7e14</span>
+                  <span>Signed: Meridian Trust</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="section-divider" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <section class="card" id="trust">
+            <div class="card-header">
+              <h3>Built for Those Who Matter</h3>
+              <span class="pill pill-good">Zero Knowledge</span>
+            </div>
+            <div class="metrics-row">
+              <div>
+                <p class="label">Incorporation</p>
+                <p class="value">Delaware, United States</p>
+              </div>
+              <div>
+                <p class="label">Security Audits</p>
+                <p class="value">Available upon request</p>
+              </div>
+              <div>
+                <p class="label">Activity Logs</p>
+                <p class="value">None retained</p>
+              </div>
+              <div>
+                <p class="label">Hardware Keys</p>
+                <p class="value">FIDO Alliance members</p>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-docs" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal-backdrop" data-close="modal-docs"></div>
+      <div class="modal-shell" role="document">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Documentation</p>
+            <h2>Protocol Reference Library</h2>
+          </div>
+          <button class="icon-btn" data-close="modal-docs" aria-label="Close modal">
+            x
+          </button>
+        </div>
+        <div class="modal-content">
+          <div class="modal-panel">
+            <p class="label">Operational Guides</p>
+            <ul>
+              <li>Deployment lifecycle overview</li>
+              <li>Guardian onboarding sequence</li>
+              <li>Release orchestration mapping</li>
+              <li>Red team readiness drills</li>
+            </ul>
+          </div>
+          <div class="modal-panel">
+            <p class="label">Security Briefs</p>
+            <ul>
+              <li>Zero-knowledge architecture spec</li>
+              <li>Incident response playbooks</li>
+              <li>Threat modeling standards</li>
+              <li>Key rotation requirements</li>
+            </ul>
+          </div>
+          <div class="modal-panel">
+            <p class="label">Integrations</p>
+            <ul>
+              <li>Hardware key provisioning</li>
+              <li>Secure vault configuration</li>
+              <li>Jurisdictional policy rules</li>
+              <li>Escrow multi-party approvals</li>
+            </ul>
+          </div>
+          <div class="modal-panel">
+            <p class="label">Release Controls</p>
+            <ul>
+              <li>Timed release schedules</li>
+              <li>Public vs private routing</li>
+              <li>Emergency cancellation logic</li>
+              <li>Post-release audit trail</li>
+            </ul>
+          </div>
+          <div class="modal-panel">
+            <p class="label">Implementation Notes</p>
+            <ul>
+              <li>System dependency matrix</li>
+              <li>Availability SLO targets</li>
+              <li>Guardian quorum thresholds</li>
+              <li>Metadata minimization rules</li>
+            </ul>
+          </div>
+          <div class="modal-panel">
+            <p class="label">Operator Tools</p>
+            <ul>
+              <li>Secure command console</li>
+              <li>Case routing taxonomy</li>
+              <li>Incident journal templates</li>
+              <li>Redaction standards</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <p class="meta">Last updated: 02:18 UTC</p>
+          <button class="button button-primary">Open Secure Docs</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-support" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal-backdrop" data-close="modal-support"></div>
+      <div class="modal-shell" role="document">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Support</p>
+            <h2>Operational Assistance</h2>
+          </div>
+          <button class="icon-btn" data-close="modal-support" aria-label="Close modal">
+            x
+          </button>
+        </div>
+        <div class="modal-content">
+          <div class="modal-panel">
+            <p class="label">Priority Channels</p>
+            <p class="value">Concierge Hotline</p>
+            <p class="meta">Encrypted line with verified operators.</p>
+          </div>
+          <div class="modal-panel">
+            <p class="label">Response SLA</p>
+            <p class="value">15 minutes</p>
+            <p class="meta">24/7 escalation for active protocols.</p>
+          </div>
+          <div class="modal-panel">
+            <p class="label">Secure Ticket</p>
+            <p class="value">Vault-backed</p>
+            <p class="meta">Attach encrypted artifacts and logs.</p>
+          </div>
+          <div class="modal-panel">
+            <p class="label">Field Operations</p>
+            <p class="value">Global coverage</p>
+            <p class="meta">Deployable response team on request.</p>
+          </div>
+          <div class="modal-panel">
+            <p class="label">Incident Checklist</p>
+            <ul>
+              <li>Confirm last known check-in</li>
+              <li>Validate guardian quorum</li>
+              <li>Lock release schedules</li>
+              <li>Engage legal counsel</li>
+            </ul>
+          </div>
+          <div class="modal-panel">
+            <p class="label">Escalation Ladder</p>
+            <ul>
+              <li>Tier 1: Operator validation</li>
+              <li>Tier 2: Guardian confirmation</li>
+              <li>Tier 3: Executive response</li>
+              <li>Tier 4: Release protocol</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="button button-outline">Open Secure Ticket</button>
+          <button class="button button-primary">Request Operator Call</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-legal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal-backdrop" data-close="modal-legal"></div>
+      <div class="modal-shell" role="document">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Legal</p>
+            <h2>Governance & Compliance</h2>
+          </div>
+          <button class="icon-btn" data-close="modal-legal" aria-label="Close modal">
+            x
+          </button>
+        </div>
+        <div class="modal-content">
+          <div class="modal-panel">
+            <p class="label">Jurisdictional Controls</p>
+            <p class="meta">Distributed trustees ensure enforceable releases.</p>
+          </div>
+          <div class="modal-panel">
+            <p class="label">Audit Statements</p>
+            <p class="meta">Independent audits available on request.</p>
+          </div>
+          <div class="modal-panel">
+            <p class="label">Data Handling</p>
+            <p class="meta">Zero-knowledge custody with no personal activity logs.</p>
+          </div>
+          <div class="modal-panel">
+            <p class="label">Release Covenant</p>
+            <p class="meta">Pre-defined release terms with guardian oversight.</p>
+          </div>
+          <div class="modal-panel">
+            <p class="label">Compliance Matrix</p>
+            <ul>
+              <li>GDPR + cross-border transfer rules</li>
+              <li>FOIA readiness documentation</li>
+              <li>Financial custody alignment</li>
+              <li>Whistleblower protection scope</li>
+            </ul>
+          </div>
+          <div class="modal-panel">
+            <p class="label">Legal Response Desk</p>
+            <ul>
+              <li>Injunction defense playbooks</li>
+              <li>Jurisdictional escalation map</li>
+              <li>Emergency counsel briefing</li>
+              <li>Chain-of-custody templates</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="button button-outline">View Policies</button>
+          <button class="button button-primary">Request Counsel Brief</button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal"
+      id="modal-concierge"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="modal-backdrop" data-close="modal-concierge"></div>
+      <div class="modal-shell" role="document">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Concierge Intake</p>
+            <h2>Design your continuity plan</h2>
+          </div>
+          <button class="icon-btn" data-close="modal-concierge" aria-label="Close modal">
+            x
+          </button>
+        </div>
+        <div class="wizard">
+          <div class="wizard-rail">
+            <div class="wizard-step is-active" data-step="1">
+              <span>1</span>
+              <div>
+                <p class="label">Profile</p>
+                <p class="meta">Core identity and role</p>
+              </div>
+            </div>
+            <div class="wizard-step" data-step="2">
+              <span>2</span>
+              <div>
+                <p class="label">Protocol</p>
+                <p class="meta">Triggers and release scope</p>
+              </div>
+            </div>
+            <div class="wizard-step" data-step="3">
+              <span>3</span>
+              <div>
+                <p class="label">Risk</p>
+                <p class="meta">Threat profile and region</p>
+              </div>
+            </div>
+            <div class="wizard-step" data-step="4">
+              <span>4</span>
+              <div>
+                <p class="label">Access</p>
+                <p class="meta">Secure contact and handoff</p>
+              </div>
+            </div>
+          </div>
+          <div class="wizard-body">
+            <div class="wizard-panel is-active" data-panel="1">
+              <div class="form-grid">
+                <label class="field">
+                  <span>Full name</span>
+                  <input type="text" placeholder="Jordan Quinn" required />
+                </label>
+                <label class="field">
+                  <span>Role category</span>
+                  <select required>
+                    <option value="">Select one</option>
+                    <option>High-net-worth individual</option>
+                    <option>Ultra-high-net-worth</option>
+                    <option>Investigative journalist</option>
+                    <option>Diplomat</option>
+                    <option>Whistleblower</option>
+                    <option>Human rights defender</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Organization (optional)</span>
+                  <input type="text" placeholder="Confidential" />
+                </label>
+                <label class="field">
+                  <span>Primary jurisdiction</span>
+                  <input type="text" placeholder="United States" required />
+                </label>
+              </div>
+            </div>
+            <div class="wizard-panel" data-panel="2">
+              <div class="form-grid">
+                <label class="field">
+                  <span>Release scope</span>
+                  <select required>
+                    <option value="">Select scope</option>
+                    <option>Private recipients only</option>
+                    <option>Public release if unreachable</option>
+                    <option>Hybrid release with guardian review</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Check-in cadence</span>
+                  <select required>
+                    <option value="">Select cadence</option>
+                    <option>Every 12 hours</option>
+                    <option>Every 24 hours</option>
+                    <option>Every 48 hours</option>
+                    <option>Custom schedule</option>
+                  </select>
+                </label>
+                <label class="field span-2">
+                  <span>Escrow payload types</span>
+                  <input type="text" placeholder="Documents, credentials, evidence" />
+                </label>
+                <label class="field">
+                  <span>Guardian involvement</span>
+                  <select required>
+                    <option value="">Select model</option>
+                    <option>Full guardian approval</option>
+                    <option>Majority quorum</option>
+                    <option>Emergency override</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <div class="wizard-panel" data-panel="3">
+              <div class="form-grid">
+                <label class="field">
+                  <span>Threat level</span>
+                  <select required>
+                    <option value="">Select level</option>
+                    <option>Moderate</option>
+                    <option>High</option>
+                    <option>Severe</option>
+                    <option>Extreme</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Primary region of operation</span>
+                  <input type="text" placeholder="Europe, MENA, Asia-Pacific" required />
+                </label>
+                <label class="field">
+                  <span>Known adversaries (optional)</span>
+                  <input type="text" placeholder="None disclosed" />
+                </label>
+                <label class="field">
+                  <span>Immediate concerns</span>
+                  <textarea rows="3" placeholder="Describe any active risks."></textarea>
+                </label>
+              </div>
+            </div>
+            <div class="wizard-panel" data-panel="4">
+              <div class="form-grid">
+                <label class="field">
+                  <span>Secure email</span>
+                  <input type="email" placeholder="secure@domain.com" required />
+                </label>
+                <label class="field">
+                  <span>Preferred contact method</span>
+                  <select required>
+                    <option value="">Select method</option>
+                    <option>Encrypted email</option>
+                    <option>Secure phone call</option>
+                    <option>In-person briefing</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Availability window</span>
+                  <input type="text" placeholder="0900-1300 UTC" />
+                </label>
+                <label class="field">
+                  <span>Additional notes</span>
+                  <textarea rows="3" placeholder="Anything we should know."></textarea>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <p class="meta">All submissions are encrypted end-to-end.</p>
+          <div class="wizard-actions">
+            <button class="button button-outline" data-wizard="back">Back</button>
+            <button class="button button-primary" data-wizard="next">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="aegis.js"></script>
+  </body>
+</html>

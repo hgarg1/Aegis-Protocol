@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zero Trust Command | DOD/MIL Concept</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader-core">
+        <div class="pentagon"></div>
+        <div class="preloader-text">Initializing Command View</div>
+      </div>
+    </div>
+    <div class="parallax-layer layer-grid" data-speed="0.08"></div>
+    <div class="parallax-layer layer-haze" data-speed="0.18"></div>
+    <div class="parallax-layer layer-jet" data-speed="0.32"></div>
+
+    <header class="site-header">
+      <div class="brand">
+        <span class="badge">DOD</span>
+        <span class="brand-text">Zero Trust Command</span>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu">
+        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="site-menu">
+        <a href="#doctrine">Doctrine</a>
+        <a href="#pillars">Pillars</a>
+        <a href="#operations">Operations</a>
+        <a href="#matrix">Threat Matrix</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#deployment">Deployment</a>
+        <a href="#faq">FAQ</a>
+        <button class="nav-close" type="button" aria-label="Close menu">Close</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="reveal hero" id="top">
+        <div class="hero-content">
+          <p class="kicker">MIL-CERTIFIED NETWORK POSTURE</p>
+          <h1>Zero Trust is the perimeter.</h1>
+          <p class="lead">
+            Verify explicitly. Enforce least privilege. Assume breach.
+            Every packet, identity, and device is scored in real time.
+          </p>
+          <div class="hero-actions">
+            <a class="primary" href="aegis.html">
+              <span class="btn-content">Initiate Zero Trust Shift</span>
+            </a>
+            <button class="ghost" data-modal="modal-readiness">
+              <span class="btn-content">Download Readiness Brief</span>
+            </button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="label">Signal Integrity</span>
+              <span class="value">99.984%</span>
+            </div>
+            <div class="stat">
+              <span class="label">Threat Latency</span>
+              <span class="value">3.1s</span>
+            </div>
+            <div class="stat">
+              <span class="label">Auth Confidence</span>
+              <span class="value">A-0</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-frame">
+          <div class="frame-header">Operations Console</div>
+          <div class="mode-switch" role="group" aria-label="Operations Console Mode">
+            <button class="ghost mode-btn is-active" data-mode="read-only">
+              <span class="btn-content">Read-only</span>
+            </button>
+            <button class="ghost mode-btn" data-mode="incident-response">
+              <span class="btn-content">Incident response</span>
+            </button>
+            <button class="ghost mode-btn" data-mode="lockdown">
+              <span class="btn-content">Lockdown</span>
+            </button>
+          </div>
+          <div class="frame-body">
+            <div class="console-line">STATUS: GREEN</div>
+            <div class="console-line">ZONE: JOINT TASK FORCE 07</div>
+            <div class="console-line">ACTIVE ASSURANCE: 4129</div>
+            <div class="console-line">ANOMALY INDEX: 0.014</div>
+            <div class="console-line">REVOCATIONS: 12</div>
+            <div class="console-line">ELEVATION REQUESTS: 5</div>
+          </div>
+          <div class="frame-grid">
+            <div class="grid-cell">IDENTITY</div>
+            <div class="grid-cell">DEVICE</div>
+            <div class="grid-cell">NETWORK</div>
+            <div class="grid-cell">DATA</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal doctrine" id="doctrine">
+        <div class="section-head">
+          <p class="kicker">OPERATIONAL DOCTRINE</p>
+          <h2>Zero Trust Command Doctrine</h2>
+        </div>
+        <div class="doctrine-grid">
+          <article>
+            <h3>Verify Explicitly</h3>
+            <p>
+              Every access request is evaluated using identity, device
+              health, location, and mission context.
+            </p>
+          </article>
+          <article>
+            <h3>Least Privilege</h3>
+            <p>
+              Just-in-time access with strict micro-segmentation and
+              enforced token lifetimes.
+            </p>
+          </article>
+          <article>
+            <h3>Assume Breach</h3>
+            <p>
+              Lateral movement is contained with continuous telemetry,
+              deception layers, and automated isolation.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="reveal pillars" id="pillars">
+        <div class="section-head">
+          <p class="kicker">CORE PILLARS</p>
+          <h2>Six vectors. One posture.</h2>
+        </div>
+        <div class="pillar-grid">
+          <div class="pillar-card">Identity &amp; Access</div>
+          <div class="pillar-card">Devices &amp; Endpoints</div>
+          <div class="pillar-card">Network Control</div>
+          <div class="pillar-card">Applications</div>
+          <div class="pillar-card">Data Security</div>
+          <div class="pillar-card">Infrastructure</div>
+        </div>
+      </section>
+
+      <section class="reveal operations" id="operations">
+        <div class="section-head">
+          <p class="kicker">MISSION OPERATIONS</p>
+          <h2>Continuous verification at battle tempo.</h2>
+        </div>
+        <div class="ops-layout">
+          <div class="ops-panel">
+            <h3>Adaptive Access</h3>
+            <p>
+              Dynamic policies adjust at runtime to threat intelligence
+              and mission readiness.
+            </p>
+            <ul>
+              <li>Context-aware MFA</li>
+              <li>Risk scoring engine</li>
+              <li>Encrypted path validation</li>
+            </ul>
+          </div>
+          <div class="ops-panel">
+            <h3>Telemetry Fusion</h3>
+            <p>
+              Unified visibility into devices, networks, and applications
+              to enable rapid decision cycles.
+            </p>
+            <ul>
+              <li>Unified logging plane</li>
+              <li>Automated containment</li>
+              <li>Supply chain attestation</li>
+            </ul>
+          </div>
+          <div class="ops-panel">
+            <h3>Resilient Continuity</h3>
+            <p>
+              Maintain mission capability under adversarial conditions
+              with segmented recovery zones.
+            </p>
+            <ul>
+              <li>Fail-secure defaults</li>
+              <li>Credential rotation</li>
+              <li>Backup enclave routing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal matrix" id="matrix">
+        <div class="section-head">
+          <p class="kicker">THREAT MATRIX</p>
+          <h2>Visibility across domains.</h2>
+        </div>
+        <div class="matrix-layout">
+          <div class="matrix-grid" role="listbox" aria-label="Threat Matrix Domains">
+            <article class="matrix-card" role="option" tabindex="0" data-domain="air">
+            <h3>Air Domain</h3>
+            <p>Flight systems validated with continuous device posture.</p>
+            <div class="matrix-meta">Risk tier: ALPHA</div>
+          </article>
+            <article class="matrix-card" role="option" tabindex="0" data-domain="land">
+            <h3>Land Domain</h3>
+            <p>Edge nodes segmented by mission zone with adaptive policy.</p>
+            <div class="matrix-meta">Risk tier: BRAVO</div>
+          </article>
+            <article class="matrix-card" role="option" tabindex="0" data-domain="sea">
+            <h3>Sea Domain</h3>
+            <p>Operational networks secured with encrypted service mesh.</p>
+            <div class="matrix-meta">Risk tier: CHARLIE</div>
+          </article>
+            <article class="matrix-card" role="option" tabindex="0" data-domain="cyber">
+            <h3>Cyber Domain</h3>
+            <p>Identity and telemetry fusion to isolate lateral movement.</p>
+            <div class="matrix-meta">Risk tier: DELTA</div>
+          </article>
+          </div>
+          <aside class="matrix-panel" aria-live="polite">
+            <div class="panel-header">Domain Brief</div>
+            <div class="panel-body">
+              <p class="panel-title">Select a domain</p>
+              <p class="panel-text">
+                Choose a domain to view posture, active policies, and
+                containment directives.
+              </p>
+              <div class="panel-stats">
+                <div>
+                  <span>Policy State</span>
+                  <strong>Standby</strong>
+                </div>
+                <div>
+                  <span>Signal Health</span>
+                  <strong>--</strong>
+                </div>
+                <div>
+                  <span>Risk Queue</span>
+                  <strong>--</strong>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="reveal architecture" id="architecture">
+        <div class="section-head">
+          <p class="kicker">REFERENCE ARCHITECTURE</p>
+          <h2>Zones, signals, and control planes.</h2>
+        </div>
+        <div class="architecture-layout">
+          <div class="arch-panel">
+            <div class="arch-label">CONTROL PLANE</div>
+            <h3>Unified Policy Engine</h3>
+            <p>
+              Centralized policy with decentralized enforcement. Every
+              zone receives signed, mission-specific directives.
+            </p>
+            <div class="arch-tags">
+              <span>Policy-as-code</span>
+              <span>Identity graph</span>
+              <span>Telemetry fusion</span>
+            </div>
+          </div>
+          <div class="arch-diagram">
+            <div class="diagram-core">COMMAND CORE</div>
+            <div class="diagram-band">MISSION ZONE A</div>
+            <div class="diagram-band">MISSION ZONE B</div>
+            <div class="diagram-band">MISSION ZONE C</div>
+          </div>
+          <div class="arch-panel">
+            <div class="arch-label">ENFORCEMENT</div>
+            <h3>Distributed Trust Gates</h3>
+            <p>
+              Gateways validate every packet and token before access is
+              granted, even inside the perimeter.
+            </p>
+            <div class="arch-tags">
+              <span>Micro-segmentation</span>
+              <span>Just-in-time access</span>
+              <span>Encrypted tunnels</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal timeline" id="timeline">
+        <div class="section-head">
+          <p class="kicker">READINESS TIMELINE</p>
+          <h2>30-60-90 day sprint.</h2>
+        </div>
+        <div class="timeline-track">
+          <div class="timeline-step">
+            <div class="step-tag">Day 0-30</div>
+            <h3>Recon and mapping</h3>
+            <p>Catalog assets, trust relationships, and mission flows.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="step-tag">Day 31-60</div>
+            <h3>Telemetry activation</h3>
+            <p>Deploy sensors, unify logs, enforce identity posture.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="step-tag">Day 61-90</div>
+            <h3>Policy enforcement</h3>
+            <p>Segment access, automate response, and drill readiness.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal deployment" id="deployment">
+        <div class="section-head">
+          <p class="kicker">DEPLOYMENT</p>
+          <h2>Zero Trust activation sequence</h2>
+        </div>
+        <ol class="deployment-steps">
+          <li>Map critical missions, data flows, and dependency chains.</li>
+          <li>Instrument identity, device posture, and network telemetry.</li>
+          <li>Segment access by mission zone and enforce policy.</li>
+          <li>Automate continuous assessment and incident response.</li>
+        </ol>
+        <div class="cta-bar">
+          <div>
+            <h3>Ready for readiness drills?</h3>
+            <p>Launch a 90-day Zero Trust adoption sprint.</p>
+          </div>
+          <button class="primary">
+            <span class="btn-content">Request Mission Brief</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="reveal intel-band" id="intel">
+        <div class="intel-grid">
+          <div class="intel-panel">
+            <p class="kicker">INTEL FEED</p>
+            <h2>Continuous assessment loop.</h2>
+            <p>
+              Automated telemetry drives rapid decisions and enforces
+              mission continuity under adversarial pressure.
+            </p>
+          </div>
+          <div class="intel-panel">
+            <div class="intel-card">
+              <span>Signal drift</span>
+              <strong data-value="0.4" data-suffix="%">0.0%</strong>
+            </div>
+            <div class="intel-card">
+              <span>Policy updates</span>
+              <strong data-value="128">0</strong>
+            </div>
+            <div class="intel-card">
+              <span>Zones secured</span>
+              <strong data-value="14">0</strong>
+            </div>
+            <div class="intel-card">
+              <span>Incidents defused</span>
+              <strong data-value="32">0</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal button-showcase" id="transmissions">
+        <div class="section-head">
+          <p class="kicker">SIGNAL TEST</p>
+          <h2>Command buttons, animated.</h2>
+        </div>
+        <div class="showcase-grid">
+          <button class="primary arrow" data-modal="modal-authorize">
+            <span class="btn-content">Authorize Corridor</span>
+            <span class="btn-arrow" aria-hidden="true">-></span>
+          </button>
+          <button class="ghost arrow" data-modal="modal-lockdown">
+            <span class="btn-content">Lockdown Perimeter</span>
+            <span class="btn-arrow" aria-hidden="true">-></span>
+          </button>
+          <button class="primary arrow" data-modal="modal-telemetry">
+            <span class="btn-content">Launch Telemetry</span>
+            <span class="btn-arrow" aria-hidden="true">-></span>
+          </button>
+          <button class="ghost arrow" data-modal="modal-grid">
+            <span class="btn-content">View Threat Grid</span>
+            <span class="btn-arrow" aria-hidden="true">-></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="reveal faq" id="faq">
+        <div class="section-head">
+          <p class="kicker">FIELD QUESTIONS</p>
+          <h2>Zero Trust FAQs</h2>
+        </div>
+        <div class="faq-grid">
+          <article>
+            <h3>Is Zero Trust a product?</h3>
+            <p>
+              No. It is an operational model requiring policy, telemetry,
+              and enforcement across every domain.
+            </p>
+          </article>
+          <article>
+            <h3>How fast can it deploy?</h3>
+            <p>
+              Initial readiness can be achieved in 90 days with focused
+              mission scoping and automation.
+            </p>
+          </article>
+          <article>
+            <h3>Does it slow operations?</h3>
+            <p>
+              Properly tuned policies reduce friction while improving
+              resilience and response time.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Operational concept only. Not an official DOD publication.</p>
+      <p>Zero Trust Command Division | Classified UX Prototype</p>
+    </footer>
+
+    <div class="modal-overlay" role="presentation">
+      <div class="modal" id="modal-authorize" role="dialog" aria-modal="true" aria-labelledby="modal-authorize-title">
+        <div class="modal-header">
+          <h3 id="modal-authorize-title">Authorize Corridor</h3>
+          <button class="modal-close" type="button">Close</button>
+        </div>
+        <div class="modal-body">
+          <p>Temporary trust corridor established for mission-critical routing.</p>
+          <div class="modal-grid">
+            <div><span>Policy Window</span><strong>18 min</strong></div>
+            <div><span>Enforcement</span><strong>Adaptive</strong></div>
+            <div><span>Audit Trail</span><strong>Enabled</strong></div>
+          </div>
+          <div class="modal-sections">
+            <div class="modal-section">
+              <h4>Primary Actions</h4>
+              <ul>
+                <li>Bind corridor to mission zone A-7</li>
+                <li>Issue short-lived access token</li>
+                <li>Route only signed traffic</li>
+              </ul>
+            </div>
+            <div class="modal-section">
+              <h4>Validation</h4>
+              <div class="modal-rows">
+                <div><span>Identity graph</span><strong>Verified</strong></div>
+                <div><span>Device posture</span><strong>Compliant</strong></div>
+                <div><span>Route integrity</span><strong>Stable</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="modal-lockdown" role="dialog" aria-modal="true" aria-labelledby="modal-lockdown-title">
+        <div class="modal-header">
+          <h3 id="modal-lockdown-title">Lockdown Perimeter</h3>
+          <button class="modal-close" type="button">Close</button>
+        </div>
+        <div class="modal-body">
+          <p>Emergency containment applied to isolate lateral movement.</p>
+          <div class="modal-grid">
+            <div><span>Zones Sealed</span><strong>7</strong></div>
+            <div><span>Tokens Revoked</span><strong>42</strong></div>
+            <div><span>Escalation</span><strong>Auto</strong></div>
+          </div>
+          <div class="modal-sections">
+            <div class="modal-section">
+              <h4>Containment Rules</h4>
+              <ul>
+                <li>Freeze elevation requests</li>
+                <li>Drop all cross-zone traffic</li>
+                <li>Rotate privileged keys</li>
+              </ul>
+            </div>
+            <div class="modal-section">
+              <h4>Command Notes</h4>
+              <p class="modal-note">
+                Lockdown is reversible once anomaly index drops below 0.03.
+              </p>
+              <div class="modal-rows">
+                <div><span>Response lead</span><strong>JTF-07</strong></div>
+                <div><span>Next review</span><strong>05:30</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="modal-telemetry" role="dialog" aria-modal="true" aria-labelledby="modal-telemetry-title">
+        <div class="modal-header">
+          <h3 id="modal-telemetry-title">Launch Telemetry</h3>
+          <button class="modal-close" type="button">Close</button>
+        </div>
+        <div class="modal-body">
+          <p>High-fidelity telemetry sweep across identity, device, and data.</p>
+          <div class="modal-viz">
+            <div class="viz-label">Signal capture rate</div>
+            <div class="viz-bars">
+              <span style="--bar: 82%"></span>
+              <span style="--bar: 64%"></span>
+              <span style="--bar: 90%"></span>
+              <span style="--bar: 58%"></span>
+              <span style="--bar: 76%"></span>
+            </div>
+          </div>
+          <div class="modal-grid">
+            <div><span>Signal Depth</span><strong>Full</strong></div>
+            <div><span>Latency</span><strong>2.4s</strong></div>
+            <div><span>Correlation</span><strong>Active</strong></div>
+          </div>
+          <div class="modal-sections">
+            <div class="modal-section">
+              <h4>Collection Set</h4>
+              <ul>
+                <li>Identity access logs</li>
+                <li>Endpoint health beacons</li>
+                <li>Network flow captures</li>
+              </ul>
+            </div>
+            <div class="modal-section">
+              <h4>Output</h4>
+              <div class="modal-rows">
+                <div><span>Fusion window</span><strong>15 min</strong></div>
+                <div><span>Retention</span><strong>30 days</strong></div>
+                <div><span>Alerts routed</span><strong>Yes</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="modal-grid" role="dialog" aria-modal="true" aria-labelledby="modal-grid-title">
+        <div class="modal-header">
+          <h3 id="modal-grid-title">Threat Grid</h3>
+          <button class="modal-close" type="button">Close</button>
+        </div>
+        <div class="modal-body">
+          <p>Live threat matrix with active mitigations and exposure paths.</p>
+          <div class="modal-viz">
+            <div class="viz-label">Alert intensity</div>
+            <div class="viz-grid">
+              <span class="orb red" style="--size: 46px; --x: 8%; --y: 18%; --dx: 70%; --dy: 12%; --dur: 6.8s;"></span>
+              <span class="orb green" style="--size: 62px; --x: 60%; --y: 10%; --dx: 10%; --dy: 70%; --dur: 8.2s;"></span>
+              <span class="orb red" style="--size: 34px; --x: 30%; --y: 60%; --dx: 45%; --dy: 15%; --dur: 5.6s;"></span>
+              <span class="orb green" style="--size: 48px; --x: 12%; --y: 68%; --dx: 68%; --dy: 8%; --dur: 7.4s;"></span>
+              <span class="orb red" style="--size: 56px; --x: 72%; --y: 52%; --dx: 5%; --dy: 20%; --dur: 6.2s;"></span>
+              <span class="orb green" style="--size: 40px; --x: 42%; --y: 32%; --dx: 20%; --dy: 45%; --dur: 7s;"></span>
+            </div>
+          </div>
+          <div class="modal-grid">
+            <div><span>Active Alerts</span><strong>13</strong></div>
+            <div><span>Containment</span><strong>92%</strong></div>
+            <div><span>Priority</span><strong>Delta</strong></div>
+          </div>
+          <div class="modal-sections">
+            <div class="modal-section">
+              <h4>Priority Lanes</h4>
+              <ul>
+                <li>Identity spoofing attempts</li>
+                <li>Supply chain anomalies</li>
+                <li>Cross-zone privilege abuse</li>
+              </ul>
+            </div>
+            <div class="modal-section">
+              <h4>Mitigation Queue</h4>
+              <div class="modal-rows">
+                <div><span>Auto-contain</span><strong>Enabled</strong></div>
+                <div><span>Hunt status</span><strong>Active</strong></div>
+                <div><span>Next sync</span><strong>03:12</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal download-modal"
+        id="modal-readiness"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-readiness-title"
+        data-download-url="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+      >
+        <div class="modal-header">
+          <h3 id="modal-readiness-title">Readiness Brief Download</h3>
+          <button class="modal-close" type="button">Close</button>
+        </div>
+        <div class="modal-body">
+          <p>Packaging encrypted brief with mission-aligned telemetry.</p>
+          <div class="download-stage">
+            <div class="download-core">
+              <div class="download-ring"></div>
+              <div class="download-stamp">SECURE</div>
+            </div>
+            <div class="download-bar">
+              <span class="download-fill"></span>
+            </div>
+            <div class="download-actions">
+              <button class="primary download-trigger" type="button">
+                <span class="btn-content">Download file</span>
+              </button>
+              <span class="download-status">Transfer status: queued</span>
+            </div>
+            <div class="download-meta">
+              <span>Checksum</span>
+              <strong>SHA-512 OK</strong>
+              <span>Queue</span>
+              <strong>Priority A</strong>
+              <span>Link</span>
+              <strong>Ready</strong>
+            </div>
+          </div>
+          <div class="modal-sections">
+            <div class="modal-section">
+              <h4>Contents</h4>
+              <ul>
+                <li>Zero Trust posture summary</li>
+                <li>Risk and compliance mapping</li>
+                <li>90-day activation plan</li>
+              </ul>
+            </div>
+            <div class="modal-section">
+              <h4>Delivery</h4>
+              <div class="modal-rows">
+                <div><span>Format</span><strong>PDF</strong></div>
+                <div><span>Encryption</span><strong>AES-256</strong></div>
+                <div><span>TTL</span><strong>24h</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="modal-login" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
+        <div class="modal-header">
+          <h3 id="modal-login-title">Command Login</h3>
+          <button class="modal-close" type="button">Close</button>
+        </div>
+        <div class="modal-body">
+          <p>Authenticate with mission credentials to access secure controls.</p>
+          <form class="modal-form" data-form="login">
+            <label>
+              <span>Callsign / ID</span>
+              <input type="text" placeholder="JTF-07-ALPHA" data-field="login-id" data-validate="id" />
+              <div class="field-message" data-message-for="login-id"></div>
+            </label>
+            <label>
+              <span>Access Key</span>
+              <input type="password" placeholder="•••••••••" data-field="login-pass" data-validate="password-lite" />
+              <div class="field-message" data-message-for="login-pass"></div>
+            </label>
+            <div class="modal-actions">
+              <button class="primary form-submit" type="button">
+                <span class="btn-content">Authenticate</span>
+              </button>
+              <button class="ghost" type="button" data-modal="modal-forgot">
+                <span class="btn-content">Forgot access</span>
+              </button>
+            </div>
+          </form>
+          <div class="form-status" data-status="login" aria-live="polite"></div>
+          <p class="modal-switch">
+            Need onboarding? <a href="#" data-modal="modal-signup">Request signup</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="modal" id="modal-signup" role="dialog" aria-modal="true" aria-labelledby="modal-signup-title">
+        <div class="modal-header">
+          <h3 id="modal-signup-title">Request Access</h3>
+          <button class="modal-close" type="button">Close</button>
+        </div>
+        <div class="modal-body">
+          <p>Submit a request for mission onboarding and credential issuance.</p>
+          <form class="modal-form" data-form="signup">
+            <label>
+              <span>Unit / Command</span>
+              <input type="text" placeholder="Joint Task Force 07" data-field="signup-unit" data-validate="text" />
+              <div class="field-message" data-message-for="signup-unit"></div>
+            </label>
+            <label>
+              <span>Contact Email</span>
+              <input type="email" placeholder="ops@unit.mil" data-field="signup-email" data-validate="email" />
+              <div class="field-message" data-message-for="signup-email"></div>
+            </label>
+            <label>
+              <span>Mission Role</span>
+              <input type="text" placeholder="Cyber Operations Lead" data-field="signup-role" data-validate="text" />
+              <div class="field-message" data-message-for="signup-role"></div>
+            </label>
+            <label>
+              <span>Access Key</span>
+              <input type="password" placeholder="At least 12 chars" data-field="signup-pass" data-validate="password" data-strength />
+              <div class="strength-meter" data-strength-for="signup-pass">
+                <span class="strength-bar"></span>
+                <span class="strength-label">Key strength: standby</span>
+              </div>
+              <div class="field-message" data-message-for="signup-pass"></div>
+            </label>
+            <div class="modal-actions">
+              <button class="primary form-submit" type="button">
+                <span class="btn-content">Submit Request</span>
+              </button>
+              <button class="ghost" type="button" data-modal="modal-login">
+                <span class="btn-content">Back to login</span>
+              </button>
+            </div>
+          </form>
+          <div class="form-status" data-status="signup" aria-live="polite"></div>
+          <p class="modal-switch">
+            Already cleared? <a href="#" data-modal="modal-login">Return to login</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="modal" id="modal-forgot" role="dialog" aria-modal="true" aria-labelledby="modal-forgot-title">
+        <div class="modal-header">
+          <h3 id="modal-forgot-title">Recover Access</h3>
+          <button class="modal-close" type="button">Close</button>
+        </div>
+        <div class="modal-body">
+          <p>Verify identity to regenerate access credentials.</p>
+          <form class="modal-form" data-form="forgot">
+            <label>
+              <span>Recovery Email</span>
+              <input type="email" placeholder="ops@unit.mil" data-field="forgot-email" data-validate="email" />
+              <div class="field-message" data-message-for="forgot-email"></div>
+            </label>
+            <label>
+              <span>Verification Code</span>
+              <input type="text" placeholder="6-digit code" data-field="forgot-code" data-validate="code" />
+              <div class="field-message" data-message-for="forgot-code"></div>
+            </label>
+            <div class="modal-actions">
+              <button class="primary form-submit" type="button">
+                <span class="btn-content">Send Reset</span>
+              </button>
+              <button class="ghost" type="button" data-modal="modal-login">
+                <span class="btn-content">Return to login</span>
+              </button>
+            </div>
+          </form>
+          <div class="form-status" data-status="forgot" aria-live="polite"></div>
+          <p class="modal-switch">
+            New here? <a href="#" data-modal="modal-signup">Request signup</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
