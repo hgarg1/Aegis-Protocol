@@ -136,6 +136,57 @@
         </div>
       </section>
 
+      <section class="pentagon-scroll" id="deadman-switch">
+        <div class="pentagon-sticky">
+          <div class="pentagon-hud">
+            <div class="hud-line">DEADMAN PROTOCOL ACTIVE</div>
+            <div class="hud-crosshair"></div>
+          </div>
+          <div class="scene">
+            <div class="carousel">
+              <div class="face">
+                <div class="face-content">
+                  <div class="face-icon">01</div>
+                  <h3>Heartbeat</h3>
+                  <p>Continuous proof-of-life signal via encrypted biometric pulses.</p>
+                </div>
+              </div>
+              <div class="face">
+                <div class="face-content">
+                  <div class="face-icon">02</div>
+                  <h3>Sharding</h3>
+                  <p>Cryptographic keys fragmented across independent jurisdiction nodes.</p>
+                </div>
+              </div>
+              <div class="face">
+                <div class="face-content">
+                  <div class="face-icon">03</div>
+                  <h3>Quorum</h3>
+                  <p>Multi-party consensus required for any manual override attempts.</p>
+                </div>
+              </div>
+              <div class="face">
+                <div class="face-content">
+                  <div class="face-icon">04</div>
+                  <h3>Trigger</h3>
+                  <p>Automatic payload release sequence initiating on signal loss.</p>
+                </div>
+              </div>
+              <div class="face">
+                <div class="face-content">
+                  <div class="face-icon">05</div>
+                  <h3>Audit</h3>
+                  <p>Immutable, cryptographically signed ledger of all state changes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="scroll-instruction">
+            <span class="scroll-arrow">↓</span> ROTATE TO INSPECT
+          </div>
+        </div>
+      </section>
+
       <section class="reveal pillars" id="pillars">
         <div class="section-head">
           <p class="kicker">CORE PILLARS</p>
@@ -251,42 +302,76 @@
         </div>
       </section>
 
-      <section class="reveal architecture" id="architecture">
+      <section class="architecture" id="architecture">
         <div class="section-head">
           <p class="kicker">REFERENCE ARCHITECTURE</p>
-          <h2>Zones, signals, and control planes.</h2>
+          <h2>Zero Trust Stack</h2>
         </div>
-        <div class="architecture-layout">
-          <div class="arch-panel">
-            <div class="arch-label">CONTROL PLANE</div>
-            <h3>Unified Policy Engine</h3>
-            <p>
-              Centralized policy with decentralized enforcement. Every
-              zone receives signed, mission-specific directives.
-            </p>
-            <div class="arch-tags">
-              <span>Policy-as-code</span>
-              <span>Identity graph</span>
-              <span>Telemetry fusion</span>
+        
+        <div class="stack-scroll-zone">
+          <div class="stack-sticky-view">
+            <div class="stack-core">
+              
+              <!-- TOP LAYER: REQUEST -->
+              <div class="stack-layer layer-top">
+                <div class="layer-plate">
+                   <div class="plate-face face-front">
+                     <span class="layer-icon">⟰</span>
+                     <span class="layer-label">REQUEST PLANE</span>
+                   </div>
+                   <div class="plate-face face-top"></div>
+                   <div class="plate-face face-side"></div>
+                   <div class="layer-detail">Identity • Device • Header</div>
+                </div>
+                <div class="stack-connector con-upper">
+                   <div class="data-stream delay-1"></div>
+                   <div class="data-stream delay-2"></div>
+                   <div class="data-stream delay-3"></div>
+                </div>
+              </div>
+
+              <!-- MIDDLE LAYER: BROKER -->
+              <div class="stack-layer layer-mid">
+                 <div class="layer-plate">
+                   <div class="plate-face face-front">
+                     <span class="layer-icon">◈</span>
+                     <span class="layer-label">TRUST BROKER</span>
+                   </div>
+                   <div class="plate-face face-top"></div>
+                   <div class="plate-face face-side"></div>
+                   <div class="layer-detail">Policy Engine • Risk Score</div>
+                 </div>
+                 <div class="stack-annotation ann-left">
+                    <h4>Control Plane</h4>
+                    <p>Dynamic decision point. No packet passes without real-time authorization.</p>
+                 </div>
+                 <div class="stack-connector con-lower">
+                    <div class="data-stream delay-1"></div>
+                    <div class="data-stream delay-2"></div>
+                 </div>
+              </div>
+
+              <!-- BOTTOM LAYER: RESOURCE -->
+              <div class="stack-layer layer-bot">
+                 <div class="layer-plate">
+                   <div class="plate-face face-front">
+                     <span class="layer-icon">⛨</span>
+                     <span class="layer-label">SECURE ENCLAVE</span>
+                   </div>
+                   <div class="plate-face face-top"></div>
+                   <div class="plate-face face-side"></div>
+                   <div class="layer-detail">Mission Data • Application</div>
+                 </div>
+                 <div class="stack-annotation ann-right">
+                    <h4>Micro-segmentation</h4>
+                    <p>Ephemeral, encrypted tunnels. Lateral movement is mathematically impossible.</p>
+                 </div>
+              </div>
+
             </div>
-          </div>
-          <div class="arch-diagram">
-            <div class="diagram-core">COMMAND CORE</div>
-            <div class="diagram-band">MISSION ZONE A</div>
-            <div class="diagram-band">MISSION ZONE B</div>
-            <div class="diagram-band">MISSION ZONE C</div>
-          </div>
-          <div class="arch-panel">
-            <div class="arch-label">ENFORCEMENT</div>
-            <h3>Distributed Trust Gates</h3>
-            <p>
-              Gateways validate every packet and token before access is
-              granted, even inside the perimeter.
-            </p>
-            <div class="arch-tags">
-              <span>Micro-segmentation</span>
-              <span>Just-in-time access</span>
-              <span>Encrypted tunnels</span>
+            
+            <div class="stack-instruction">
+               <span class="scroll-arrow">↓</span> DEPLOY STACK
             </div>
           </div>
         </div>

@@ -642,3 +642,83 @@ const startOrbAnimation = () => {
 };
 
 startOrbAnimation();
+
+const pentagonSection = document.querySelector(".pentagon-scroll");
+const pentagonCarousel = document.querySelector(".carousel");
+
+if (pentagonSection && pentagonCarousel) {
+  const updatePentagon = () => {
+    const rect = pentagonSection.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+    const totalScroll = rect.height - viewportHeight;
+    
+    // Calculate progress: 0 when top aligns with top, 1 when bottom aligns with bottom
+    let progress = -rect.top / totalScroll;
+    progress = Math.max(0, Math.min(1, progress));
+    
+    const angle = progress * 360; 
+    pentagonCarousel.style.transform = `rotateY(-${angle}deg)`;
+  };
+
+  window.addEventListener("scroll", () => {
+    requestAnimationFrame(updatePentagon);
+  }, { passive: true });
+}
+
+
+const stackSection = document.querySelector(".stack-scroll-zone");
+const layerTop = document.querySelector(".layer-top");
+const layerMid = document.querySelector(".layer-mid");
+const layerBot = document.querySelector(".layer-bot");
+const conUpper = document.querySelector(".con-upper");
+const conLower = document.querySelector(".con-lower");
+const annLeft = document.querySelector(".ann-left");
+const annRight = document.querySelector(".ann-right");
+
+if (stackSection && layerTop) {
+  const updateStack = () => {
+    const rect = stackSection.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+    const totalScroll = rect.height - viewportHeight;
+    
+    // Progress 0 to 1
+    let progress = -rect.top / totalScroll;
+    progress = Math.max(0, Math.min(1, progress));
+    
+    // Separation distance
+    const gap = 120; // px
+    
+    // Top moves UP
+    layerTop.style.transform = `translateY(-${progress * gap}px)`;
+    // Bottom moves DOWN
+    layerBot.style.transform = `translateY(${progress * gap}px)`;
+    
+    // Connectors grow
+    // Their height should match the gap created. 
+    // gap * progress is the distance moved.
+    if (conUpper) conUpper.style.height = `${progress * gap}px`;
+    if (conLower) conLower.style.height = `${progress * gap}px`;
+    
+    // Annotations fade in after 30%
+    if (progress > 0.3) {
+       if (annLeft) annLeft.style.opacity = "1";
+       if (annLeft) annLeft.style.transform = "translateX(0)";
+    } else {
+       if (annLeft) annLeft.style.opacity = "0";
+       if (annLeft) annLeft.style.transform = "translateX(20px)";
+    }
+    
+    if (progress > 0.6) {
+       if (annRight) annRight.style.opacity = "1";
+       if (annRight) annRight.style.transform = "translateX(0)";
+    } else {
+       if (annRight) annRight.style.opacity = "0";
+       if (annRight) annRight.style.transform = "translateX(-20px)";
+    }
+  };
+
+  window.addEventListener("scroll", () => {
+    requestAnimationFrame(updateStack);
+  }, { passive: true });
+}
+

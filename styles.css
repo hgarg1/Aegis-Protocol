@@ -2091,3 +2091,427 @@ h2 {
     display: none;
   }
 }
+
+
+/* =========================================
+   NEW FEATURE: ZERO TRUST PENTAGON SCROLL
+   ========================================= */
+.pentagon-scroll {
+  height: 400vh; /* Long scroll area */
+  position: relative;
+  z-index: 5;
+  padding: 0; /* Override default section padding */
+  border-bottom: 1px solid var(--stroke);
+  background: rgba(8, 12, 15, 0.5);
+}
+
+.pentagon-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px; /* 3D Scene */
+  background: radial-gradient(circle at center, rgba(18, 28, 33, 0.4), rgba(6, 9, 12, 0.95));
+}
+
+.pentagon-hud {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hud-line {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--hazard);
+  text-shadow: 0 0 10px rgba(240, 180, 41, 0.4);
+}
+
+.hud-crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  border: 1px dashed rgba(92, 194, 217, 0.15);
+  border-radius: 50%;
+}
+
+.hud-crosshair::before, .hud-crosshair::after {
+  content: "";
+  position: absolute;
+  background: rgba(92, 194, 217, 0.3);
+}
+
+.hud-crosshair::before {
+  top: -10px; bottom: -10px; left: 50%; width: 1px;
+}
+
+.hud-crosshair::after {
+  left: -10px; right: -10px; top: 50%; height: 1px;
+}
+
+.scene {
+  position: relative;
+  width: 280px; /* Width of a face */
+  height: 240px; /* Height of a face */
+  transform-style: preserve-3d;
+  z-index: 5;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.1s linear; /* Smooth update via JS */
+  transform: rotateY(0deg);
+}
+
+.face {
+  position: absolute;
+  width: 280px;
+  height: 240px;
+  left: 0;
+  top: 0;
+  padding: 30px;
+  background: rgba(12, 18, 22, 0.9);
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 30px rgba(92, 194, 217, 0.15);
+  backface-visibility: hidden; /* Or visible, depending on effect. Hidden is cleaner */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Positioning faces */
+.face:nth-child(1) { transform: rotateY(0deg) translateZ(220px); }
+.face:nth-child(2) { transform: rotateY(72deg) translateZ(220px); }
+.face:nth-child(3) { transform: rotateY(144deg) translateZ(220px); }
+.face:nth-child(4) { transform: rotateY(216deg) translateZ(220px); }
+.face:nth-child(5) { transform: rotateY(288deg) translateZ(220px); }
+
+/* Make them look like walls/panels */
+.face::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(92, 194, 217, 0.3);
+  pointer-events: none;
+}
+
+.face-icon {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--hazard);
+  margin-bottom: 12px;
+  opacity: 0.8;
+}
+
+.face h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+
+.face p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+}
+
+.scroll-instruction {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  opacity: 0.6;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateX(-50%) translateY(0);}
+  40% {transform: translateX(-50%) translateY(-6px);}
+  60% {transform: translateX(-50%) translateY(-3px);}
+}
+
+/* Adjust for mobile */
+@media (max-width: 600px) {
+  .scene {
+    width: 240px;
+    height: 220px;
+  }
+  .face {
+    width: 240px;
+    height: 220px;
+  }
+  .face:nth-child(1) { transform: rotateY(0deg) translateZ(190px); }
+  .face:nth-child(2) { transform: rotateY(72deg) translateZ(190px); }
+  .face:nth-child(3) { transform: rotateY(144deg) translateZ(190px); }
+  .face:nth-child(4) { transform: rotateY(216deg) translateZ(190px); }
+  .face:nth-child(5) { transform: rotateY(288deg) translateZ(190px); }
+}
+
+/* =========================================
+   NEW FEATURE: ARCHITECTURE STACK EXPLOSION
+   ========================================= */
+
+/* Explicitly ensure architecture section allows sticky positioning */
+.architecture {
+  overflow: visible !important;
+  opacity: 1; /* Ensure visibility since we removed .reveal */
+  transform: none; /* Reset any reveal transforms */
+}
+
+/* Architecture Stack Styles */
+.stack-scroll-zone {
+  height: 350vh; /* Deep scroll interaction */
+  position: relative;
+  margin-top: -50px; /* Pull up into section padding */
+  z-index: 10;
+}
+
+.stack-sticky-view {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.stack-core {
+  position: relative;
+  width: 500px;
+  height: 120px; /* Initial collapsed height */
+  transform-style: preserve-3d;
+  transform: rotateX(15deg) rotateY(-15deg);
+}
+
+.stack-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  transition: transform 0.1s linear;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Specific Z-indexing for the overlap look when collapsed */
+.layer-top { z-index: 3; }
+.layer-mid { z-index: 2; }
+.layer-bot { z-index: 1; }
+
+.layer-plate {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.plate-face {
+  position: absolute;
+  border: 1px solid rgba(92, 194, 217, 0.4);
+  background: rgba(14, 20, 24, 0.95);
+  box-shadow: inset 0 0 20px rgba(92, 194, 217, 0.05);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 12px;
+}
+
+.face-front {
+  width: 100%;
+  height: 100%;
+  transform: translateZ(40px);
+}
+
+.face-top {
+  width: 100%;
+  height: 80px;
+  background: rgba(18, 28, 33, 0.9);
+  transform: rotateX(90deg) translateZ(40px);
+  border-color: rgba(92, 194, 217, 0.2);
+}
+
+.face-side {
+  width: 80px;
+  height: 100%;
+  background: rgba(12, 18, 22, 0.9);
+  transform: rotateY(90deg) translateZ(250px);
+  right: 0;
+  left: auto;
+}
+
+.layer-icon {
+  font-size: 1.5rem;
+  color: var(--hazard);
+}
+
+.layer-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  color: #e9f0ea;
+}
+
+.layer-detail {
+  position: absolute;
+  right: 20px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Connectors */
+.stack-connector {
+  position: absolute;
+  top: 40px; /* Center of plate */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: rgba(92, 194, 217, 0.2);
+  transform-origin: top;
+  height: 0; /* Animated by JS */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.con-upper {
+  top: 80px; 
+}
+.con-lower {
+  top: 80px;
+}
+
+/* Data Streams in connectors */
+.data-stream {
+  width: 4px;
+  height: 20px;
+  background: var(--hazard);
+  box-shadow: 0 0 10px var(--hazard);
+  position: absolute;
+  animation: stream-flow 1s infinite linear;
+  opacity: 0;
+}
+
+@keyframes stream-flow {
+  0% { top: -20px; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.5s; }
+.delay-3 { animation-delay: 0.8s; }
+
+/* Annotations */
+.stack-annotation {
+  position: absolute;
+  top: 10px;
+  width: 240px;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+.ann-left {
+  right: 110%;
+  text-align: right;
+  border-right: 2px solid var(--hazard);
+  padding-right: 16px;
+}
+
+.ann-right {
+  left: 110%;
+  text-align: left;
+  border-left: 2px solid var(--accent);
+  padding-left: 16px;
+}
+
+.stack-annotation h4 {
+  margin: 0 0 6px;
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--signal);
+}
+
+.stack-annotation p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.stack-instruction {
+  position: absolute;
+  bottom: 80px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  opacity: 0.5;
+  animation: bounce 2s infinite;
+  text-transform: uppercase;
+}
+
+/* Mobile adjust */
+@media (max-width: 768px) {
+  .stack-core {
+    width: 300px;
+    transform: rotateX(15deg) rotateY(-10deg);
+  }
+  .face-side {
+    transform: rotateY(90deg) translateZ(150px);
+  }
+  .layer-detail {
+    display: none;
+  }
+  .ann-left, .ann-right {
+    position: relative;
+    right: auto;
+    left: auto;
+    width: 100%;
+    text-align: center;
+    border: none;
+    padding: 0;
+    margin-top: 90px;
+    background: rgba(10,14,16,0.9);
+    padding: 10px;
+  }
+}
+
